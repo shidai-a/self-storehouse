@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html{
+				overflow: hidden;
+			}
+			#bac{
+				width: 500px;
+				height: 375px;
+				border: red 2px solid;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#bac>ul{
+				width: 3000px;
+				height: 375px;
+				background-color: black;
+				list-style: none;
+				position: absolute;
+				left: 0;
+				
+			}
+			#bac>ul>li{
+				float: left;
+				}
+		</style> 
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var offset =0
+				 var timer;
+					function auto(){
+					timer= setInterval(function(){
+					offset += -10
+					if (offset<=-2500) {
+						offset=0
+					} 
+					$("#bac>ul").css({
+						left:offset
+						})
+					},50)
+				}
+			  auto();
+			  $("li").mouseenter(function(){
+				 clearInterval(timer)
+				 $(this).siblings().fadeTo(100,0.5)
+				 $(this).fadeTo(100,1)
+			  })
+			  $("li").mouseleave(function(){
+			  	 auto();
+				 $("li").fadeTo(100,1)
+			  })
+			  
+			})
+		</script>
+	</head>
+	<body>
+		<div id="bac"> 
+		<ul>
+			<li><img src="img/A1%20.jpg" ></li>
+			<li><img src="img/A2.jpg" ></li>
+			<li><img src="img/A3.jpg" ></li>
+			<li><img src="img/A4.jpg " ></li>
+			<li><img src="img/A5.jpg" ></li>
+			<li><img src="img/A1%20.jpg" ></li>
+		</ul>
+		</div>
+	</body>
+</html>
