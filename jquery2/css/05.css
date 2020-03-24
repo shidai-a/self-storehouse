@@ -1,0 +1,74 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.bac{
+	width: 400px;
+	height: 600px;
+	border: #000000 2px solid;
+	position: relative;
+	margin: 100px auto;
+	
+	
+}
+.bac>.nav{
+	width: 100%;
+	height: 50px;
+	border-bottom: #000000 1px solid;
+	
+}
+.nav>h1{
+	margin-left: 40px;
+}
+.content{
+	width: 100%;
+	height: 550px;
+	position: relative;
+}
+.content>.scrollBar{
+	width: 60%;
+	height: 20px;
+	background-color: #FF0000;
+	border-radius: 10px;
+	position: absolute;
+	left: 80px;
+	top: 30px;
+}
+.content>.start{
+	width: 170px;
+	height: 40px;
+	border: none;
+	background-color: orangered;
+	border-radius: 10px;
+	color: white;
+	font-size: 18px;
+	position: absolute;
+	bottom: 200px;
+	left: 110px;
+}
+.bac>.mask{
+	width: 400px;
+	height: 600px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	
+}
+.mask>h1{
+	margin-top: 200px;
+	margin-left:130px ;
+}
+.mask>button{
+	margin-top:50px ;
+	margin-left:110px ;
+	width: 170px;
+	height: 40px;
+	border: none;
+	background-color: orangered;
+	border-radius: 10px;
+	color: white;
+	font-size: 18px;
+	
+}
